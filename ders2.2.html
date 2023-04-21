@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!--Kullanıcı Bilgilerini Sistteme Kaydetme-->
+    <form class="row g-3 need-validations" novalidate>
+        <div class="col-4">
+            <label for="firstname" class="form-label">Ad</label>
+            <input type="text" class="form-control" id="firstname" required>
+            <div class="valid-feedback">Geçerli Ad Giriniz</div>
+            <div class="invalid-feedback">
+                Geçersiz Ad Girdiniz
+            </div>
+        </div>
+
+        <div class="col-4">
+            <label for="lastname" class="form-label">Soyad</label>
+            <input type="text" class="form-control" id="lastname" required>
+            <div class="valid-feedback">
+                Geçerli bir Soyad giriniz
+            </div>
+            <div class="invalid-feedback">
+                Geçersiz bir Soyad girdiniz
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </form>
+    <script>
+        var form = document.querySelector(".need-validations");
+
+        form.addEventListener("submit",function(event){
+            if(!form.checkValidity()){
+                event.preventDefault();
+            }
+        })
+    </script>
+    
+    <!--MİN-MAX AYARLAMA GÖRME-->
+    <!--
+    <label for="range1" class="form">
+        value: <span id="rangeValue"></span>
+    </label>
+    
+    <label for="range1" class="form-label">Range1</label>
+    <input type="range" name="range1" id="range1" class="form-range" min="0" max="10" step="0.5" onchange="updateRange(this.value)">
+    <script>
+        function updateRange(value) {
+            document.getElementById("rangeValue").innerHTML=value;
+        }
+    </script>
+-->
+    <!--Kayıt Formu Oluşturma-->
+    <!--
+    <form class="mb-5">
+        <div class="row mb-3">
+            <label for="email" class="col-2">E-mail</label>
+            <div class="col-10">
+                <input type="email" name="" id="" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="row mb-3">
+            <label for="password" class="col-2">Password</label>
+            <div class="col-10">
+                <input type="password" name="" id="" class="form-control">
+            </div>
+
+        </div>
+
+        <div class="row mb-3">
+            <label for="password" class="col-2">Gender</label>
+            <div class="col-10">
+                <div class="form-check">
+                    <input type="radio" name="gender" id="female" class="form-check-input">
+                    <label for="female" class="form-check-label" >Female</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="gender" id="male" class="form-check-input">
+                    <label for="male" class="form-check-label">Male</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-10 offset-2">
+                <button type="submit" class="btn btn-warning">Submit</button>
+            </div>
+        </div>
+
+    </form>
+
+-->
+    <!--Kullanıcı Adı Şifre İsteme-->
+    <!--
+    <br>
+    <form class="mb-5 ">
+        <div class="mb-3">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+-->
+
+<!--
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupfile1">Upload</label>
+        <input type="file" name="inputGroupfile1" id="inputGroupfile1" class="form-control">
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="file" name="inputGroupfile1" id="inputGroupfile1" class="form-control">
+        <label for="inputGroupfile1" class="input-group-text"></label>
+    </div>
+
+-->
+    <!--
+    <br>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control">
+        <button class="btn btn-outline-primary">Button</button>
+    </div>
+
+    <div class="input-group mb-3">
+        <button class="btn btn-outline-primary">Button</button>
+        <input type="text" class="form-control">
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control">
+        <button class="btn btn-outline-primary">Button</button>
+        <button class="btn btn-outline-primary">Button</button>
+    </div>
+
+    <div class="input-group mb-3">
+        <select name="text" class="form-select">
+            <option value="0" selected>Seçiniz</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+-->
+
+    <!--Klavyeden Bilgi Alma İşlemleri-->
+    <!--
+    <br>
+    <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">http://</span>
+        <input type="text" class="form-control" placeholder="URL giriniz...">
+    </div>    
+
+    <div class="input-group input-group-sm mb-3">
+        <input type="text" class="form-control" placeholder="E-posta giriniz...">
+        <span class="input-group-text">@hotmail.com</span>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">TL</span>
+        <input type="text" class="form-control">
+        <span class="input-group-text">00</span>
+    </div>
+-->
+
+        <!--Kaydırmalı CheckBox Button-->
+        <!--
+        <div class="form-check form-switch">
+            <input type="checkbox" name="chkSw1" id="shkSw1" class="form-check-input">
+            <label for="chkSw1" class="form-check-label">Switch CheckBox 1</label>
+        </div>
+    -->
+        <!--CheckBox RadioButton-->
+    <!--
+    <div class="form-check">
+        <input type="radio" id="rb1" class="form-check-input">
+        <label for="rb1" class="form-check-label">Radio 1</label>
+    </div>
+-->
+
+    <!--CheckBox tik atma butonları-->
+    <!--
+    <div class="form-check">
+        <input type="checkBox"  name="chkBox1" id="chkBox1" class="form-check-input">
+        <label for="chckBox1" class="form-check-label">Checkbox 1</label>
+    </div>
+
+    <div class="form-check">
+        <input type="checkBox"  name="chkBox1" id="chkBox1" class="form-check-input">
+        <label for="chckBox2" class="form-check-label">Checkbox 2</label>
+    </div>
+
+-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+</html>
